@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { Share2, User, Mail, MessageSquare, Send } from "lucide-react";
-import Swal from "sweetalert2";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState, useEffect } from 'react';
+import { Share2, User, Mail, MessageSquare, Send } from 'lucide-react';
+import Swal from 'sweetalert2';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    AOS.init({ once: false });
+    AOS.init({ once: true, duration: 800 });
   }, []);
 
   const handleChange = (e) => {
@@ -44,18 +44,18 @@ const Contact = () => {
         title: 'Success!',
         text: 'Your message has been sent successfully!',
         icon: 'success',
-        confirmButtonColor: '#4169E1',
+        confirmButtonColor: '#4F46E5',
         timer: 2000,
-        timerProgressBar: true
+        timerProgressBar: true,
       });
 
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       Swal.fire({
         title: 'Error!',
         text: 'Something went wrong. Please try again later.',
         icon: 'error',
-        confirmButtonColor: '#4169E1'
+        confirmButtonColor: '#4F46E5',
       });
     } finally {
       setIsSubmitting(false);
@@ -63,24 +63,26 @@ const Contact = () => {
   };
 
   return (
-    <section id="Contact" className="min-h-screen bg-[#F9F6F1] text-[#0A1F44] flex items-center justify-center py-20 px-5">
-      <div className="w-full max-w-6xl grid md:grid-cols-2 gap-12">
+    <section
+      id="Contact"
+      className="min-h-screen bg-gradient-to-b from-[#F0F9FF] to-[#FFFFFF] text-[#0F172A] flex items-center justify-center py-20 px-4 sm:px-8 md:px-16"
+    >
+      <div className="w-full max-w-6xl grid md:grid-cols-2 gap-12 items-center">
         {/* Contact Form */}
         <div
           className="bg-white rounded-2xl p-10 shadow-xl border border-gray-200"
           data-aos="fade-right"
-          data-aos-duration="1200"
         >
           <div className="flex justify-between items-start mb-6">
             <div>
-              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#4169E1] to-[#38BDF8]">
+              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366F1] to-[#06B6D4]">
                 Contact Us
               </h2>
-              <p className="text-[#333333] mt-1 text-sm">
+              <p className="text-gray-600 mt-1 text-sm">
                 Got a question? Send us a message and we’ll respond promptly.
               </p>
             </div>
-            <Share2 className="w-6 h-6 text-[#4169E1] opacity-80" />
+            <Share2 className="w-6 h-6 text-[#6366F1] opacity-80" />
           </div>
 
           <form
@@ -92,9 +94,9 @@ const Contact = () => {
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
 
-            {/* Name */}
+            {/* Name Field */}
             <div className="relative">
-              <User className="absolute left-4 top-4 text-[#9CA3AF]" />
+              <User className="absolute left-4 top-4 text-gray-400" />
               <input
                 type="text"
                 name="name"
@@ -103,13 +105,13 @@ const Contact = () => {
                 onChange={handleChange}
                 disabled={isSubmitting}
                 required
-                className="w-full pl-12 py-3 bg-white text-[#0A1F44] rounded-lg border border-gray-300 focus:border-[#4169E1] placeholder-[#9CA3AF] outline-none"
+                className="w-full pl-12 py-3 bg-white text-[#0F172A] rounded-lg border border-gray-300 focus:border-[#6366F1] placeholder-gray-400 outline-none transition"
               />
             </div>
 
-            {/* Email */}
+            {/* Email Field */}
             <div className="relative">
-              <Mail className="absolute left-4 top-4 text-[#9CA3AF]" />
+              <Mail className="absolute left-4 top-4 text-gray-400" />
               <input
                 type="email"
                 name="email"
@@ -118,13 +120,13 @@ const Contact = () => {
                 onChange={handleChange}
                 disabled={isSubmitting}
                 required
-                className="w-full pl-12 py-3 bg-white text-[#0A1F44] rounded-lg border border-gray-300 focus:border-[#4169E1] placeholder-[#9CA3AF] outline-none"
+                className="w-full pl-12 py-3 bg-white text-[#0F172A] rounded-lg border border-gray-300 focus:border-[#6366F1] placeholder-gray-400 outline-none transition"
               />
             </div>
 
-            {/* Message */}
+            {/* Message Field */}
             <div className="relative">
-              <MessageSquare className="absolute left-4 top-4 text-[#9CA3AF]" />
+              <MessageSquare className="absolute left-4 top-4 text-gray-400" />
               <textarea
                 name="message"
                 placeholder="Your Message"
@@ -132,7 +134,7 @@ const Contact = () => {
                 onChange={handleChange}
                 disabled={isSubmitting}
                 required
-                className="w-full pl-12 py-3 h-32 resize-none bg-white text-[#0A1F44] rounded-lg border border-gray-300 focus:border-[#4169E1] placeholder-[#9CA3AF] outline-none"
+                className="w-full pl-12 py-3 h-32 resize-none bg-white text-[#0F172A] rounded-lg border border-gray-300 focus:border-[#6366F1] placeholder-gray-400 outline-none transition"
               />
             </div>
 
@@ -140,26 +142,30 @@ const Contact = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-[#4169E1] to-[#38BDF8] py-3 text-white font-semibold rounded-lg flex items-center justify-center gap-2 hover:scale-105 transition-transform duration-200"
+              className="w-full bg-gradient-to-r from-[#6366F1] to-[#06B6D4] py-3 text-white font-semibold rounded-lg flex items-center justify-center gap-2 hover:scale-105 transition-transform duration-200"
             >
               <Send className="w-5 h-5" />
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
 
         {/* Contact Details */}
         <div
-          className="flex flex-col justify-center space-y-4 pl-6 border-l border-gray-300"
+          className="flex flex-col justify-center space-y-4 md:pl-8"
           data-aos="fade-left"
-          data-aos-duration="1200"
         >
-          <h3 className="text-xl font-semibold">Contact Details</h3>
-          <p className="text-[#4169E1] break-all font-medium">prabhashswarnajith@gmail.com</p>
-          <p className="text-[#333333] max-w-md text-sm">
-            We’d love to hear your feedback or answer any inquiries related to the project.
+          <h3 className="text-2xl font-semibold text-[#0F172A]">
+            Contact Details
+          </h3>
+          <p className="text-[#6366F1] font-medium break-all">
+            prabhashswarnajith@gmail.com
           </p>
-          <p className="text-[#0A1F44] font-medium">— Team Optitech</p>
+          <p className="text-gray-600 max-w-md text-sm">
+            We’d love to hear your feedback or answer any inquiries related to
+            the project or research.
+          </p>
+          <p className="text-[#0F172A] font-semibold">— Team Optitech</p>
         </div>
       </div>
     </section>
