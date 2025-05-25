@@ -40,7 +40,7 @@ const students = [
     role: 'Team Member',
     affiliation: 'SLIIT - Faculty of Computing',
     department: 'Information Technology',
-    image: '/images/placeholder-profile.png',
+    image: '/images/Prabash.jpg',
     email: 'it21253676@my.sliit.lk',
     linkedin: 'https://www.linkedin.com/in/prabhash-swarnajith/',
   },
