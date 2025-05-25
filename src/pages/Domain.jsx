@@ -4,17 +4,14 @@ import 'aos/dist/aos.css';
 
 const technologies = [
   { name: 'Python', file: 'python.png' },
-  { name: 'React', file: 'react.png' },
+  { name: 'HTML', file: 'html.png' },
+  { name: 'JavaScript', file: 'javascript.png' },
+  { name: 'CSS', file: 'css.png' },
   { name: 'TensorFlow', file: 'tensorflow.png' },
   { name: 'Keras', file: 'keras.png' },
-  { name: 'MongoDB', file: 'mongodb.png' },
-  { name: 'Firebase', file: 'firebase.png' },
   { name: 'Google Cloud', file: 'gcloud.png' },
-  { name: 'Kafka', file: 'kafka.png' },
-  { name: 'Docker', file: 'docker.png' },
-  { name: 'Google Colab', file: 'colab.png' },
-  { name: 'Google Maps API', file: 'gmap.png' },
-  { name: 'JWT', file: 'jwt.png' },
+  { name: 'Flask', file: 'flask.png' },
+  { name: 'OpenCV', file: 'opencv.png' },
 ];
 
 const Domain = () => {
