@@ -6,25 +6,19 @@ import Milestones from './pages/Milestones';
 import Documents from './pages/Documents';
 import Presentations from './pages/Presentations';
 
-
-
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
-     <Navbar />
+      <Navbar />
       <main className="flex-grow">
         <Home />
         <Domain />
         <Milestones />
         <Documents />
         <Presentations />
-        <Contact />  
-       
+        <Contact />
       </main>
-      
     </div>
-    
-
   );
 }
 
