@@ -49,7 +49,7 @@ const Home = () => {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-[#0A1F44]">
           Discover <span className="text-[#4169E1]">Smarter Eye Care</span>
           <br />
-          with <span className="text-[#38BDF8]">Optitech</span>
+          with <span className="text-[#38BDF8]">OptiTech</span>
         </h1>
 
         <p className="text-lg lg:text-xl text-[#333333] font-medium max-w-xl">
