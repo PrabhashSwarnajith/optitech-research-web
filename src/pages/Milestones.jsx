@@ -1,53 +1,90 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const milestones = [
   {
-    date: "March 2021",
-    title: "Project Proposal",
+    date: 'December 2024',
+    title: 'Proposal Presentation',
     description:
-      "Initial idea and plan presented to gain approval and define the project scope clearly.",
+      'A Proposal Presentation is a formal presentation that explains a planned project, its purpose, and how it will be carried out.',
     marks: 6,
     progress: 6,
-    badgeColor: "bg-[#4169E1]",
-    progressColor: "from-[#4169E1] to-[#38BDF8]",
+    badgeColor: 'bg-[#4169E1]',
+    badgeColorHex: '#4169E1',
+    progressColor: 'from-[#4169E1] to-[#38BDF8]',
   },
   {
-    date: "June 2021",
-    title: "Progress Presentation I",
+    date: 'December 2024',
+    title: 'Progress Presentation I',
     description:
-      "Midway progress review covering implemented features and existing gaps.",
-    marks: 6,
-    progress: 6,
-    badgeColor: "bg-[#38BDF8]",
-    progressColor: "from-[#38BDF8] to-[#0EA5E9]",
+      'Formal presentation demonstrating ~50% development progress, key feature demo, and live Q&A.',
+    marks: 15,
+    progress: 15,
+    badgeColor: 'bg-[#38BDF8]',
+    badgeColorHex: '#38BDF8',
+    progressColor: 'from-[#38BDF8] to-[#0EA5E9]',
   },
   {
-    date: "August 2021",
-    title: "Final Presentation",
+    date: 'March 2025',
+    title: 'Progress Presentation II',
     description:
-      "Presentation of completed system with evaluation based on outcome.",
+      'Demonstrate 90% project completion with system functionality, UI/UX quality, and commercial readiness.',
+    marks: 18,
+    progress: 18,
+    badgeColor: 'bg-[#0A1F44]',
+    badgeColorHex: '#0A1F44',
+    progressColor: 'from-[#0A1F44] to-[#1E3A8A]',
+  },
+  {
+    date: 'March 2025',
+    title: 'Research Paper',
+    description:
+      'An academic document presenting results from your investigation into a targeted problem area.',
+    marks: 10,
+    progress: 10,
+    badgeColor: 'bg-[#6366F1]',
+    badgeColorHex: '#6366F1',
+    progressColor: 'from-[#6366F1] to-[#A855F7]',
+  },
+  {
+    date: 'March 2025',
+    title: 'Final Report',
+    description:
+      'A formal report documenting the complete project journey from design to evaluation.',
+    marks: 19,
+    progress: 19,
+    badgeColor: 'bg-[#A855F7]',
+    badgeColorHex: '#A855F7',
+    progressColor: 'from-[#A855F7] to-[#D946EF]',
+  },
+  {
+    date: 'May 2025',
+    title: 'Final Presentation',
+    description:
+      'Assesses the complete product and individual contributions through a live demo and Q&A.',
     marks: 20,
     progress: 20,
-    badgeColor: "bg-[#0A1F44]",
-    progressColor: "from-[#0A1F44] to-[#1E3A8A]",
+    badgeColor: 'bg-[#22C55E]',
+    badgeColorHex: '#22C55E',
+    progressColor: 'from-[#22C55E] to-[#4ADE80]',
   },
   {
-    date: "September 2021",
-    title: "Final Report Submission",
+    date: 'May 2025',
+    title: 'Project Website',
     description:
-      "Complete project report with system design, testing, and results.",
-    marks: 8,
-    progress: 8,
-    badgeColor: "bg-[#6366F1]",
-    progressColor: "from-[#6366F1] to-[#A855F7]",
+      'An online platform summarizing the system, features, and research in a structured format.',
+    marks: 2,
+    progress: 2,
+    badgeColor: 'bg-[#F59E0B]',
+    badgeColorHex: '#F59E0B',
+    progressColor: 'from-[#F59E0B] to-[#FBBF24]',
   },
 ];
 
 const Milestones = () => {
   useEffect(() => {
-    AOS.init({ once: true });
+    AOS.init({ duration: 800, once: true });
   }, []);
 
   return (
@@ -55,74 +92,63 @@ const Milestones = () => {
       id="Milestones"
       className="min-h-screen bg-[#F9F6F1] text-[#0A1F44] py-20 px-4 sm:px-6 md:px-10"
     >
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16" data-aos="fade-down">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold mb-16 text-center" data-aos="zoom-in">
           Timeline in Brief
         </h2>
 
-        <div className="flex flex-col md:flex-row gap-12">
-          {/* Sidebar */}
-          <div className="md:w-1/3">
-            <h3 className="text-xl font-semibold mb-4" data-aos="fade-right">
-              Project Milestones Overview
-            </h3>
-            <p
-              className="text-sm text-gray-700 leading-relaxed"
-              data-aos="fade-right"
-              data-aos-delay="100"
-            >
-              This timeline summarizes each key step of the academic project
-              development process — from proposal to final reporting.
-            </p>
-          </div>
+        <div className="relative before:absolute before:left-1/2 before:top-0 before:bottom-0 before:w-1 before:bg-gray-300">
+          {milestones.map((item, index) => {
+            const isLeft = index % 2 === 0;
 
-          {/* Timeline */}
-          <div className="md:w-2/3">
-            <div className="relative border-l-4 border-gray-300 ml-6">
-              {milestones.map((item, index) => (
+            return (
+              <div
+                key={index}
+                className={`relative mb-5 flex items-center ${
+                  isLeft ? 'justify-start' : 'justify-end'
+                }`}
+                data-aos={isLeft ? 'fade-right' : 'fade-left'}
+                data-aos-delay={index * 100}
+              >
+                {/* Timeline Dot */}
                 <div
-                  key={index}
-                  className="mb-14 ml-6 relative"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
+                  className="absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full border-4 border-white z-10 shadow-md"
+                  style={{ backgroundColor: item.badgeColorHex }}
+                ></div>
+
+                {/* Timeline Card */}
+                <div
+                  className={`w-full max-w-md px-6 py-4 bg-white rounded-xl shadow-lg border-t-4 ${
+                    isLeft ? 'ml-10' : 'mr-10'
+                  }`}
+                  style={{ borderColor: item.badgeColorHex }}
                 >
-                  <div
-                    className={`w-6 h-6 absolute -left-9 top-1 rounded-full border-4 border-white ${item.badgeColor}`}
-                  ></div>
-
-                  <div className="mb-2">
-                    <span
-                      className={`px-3 py-1 text-xs text-white rounded ${item.badgeColor}`}
-                    >
-                      {item.date}
-                    </span>
-                  </div>
-
-                  <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-700 mb-3 text-sm leading-snug">
+                  <span
+                    className={`inline-block text-xs text-white px-3 py-1 rounded ${item.badgeColor}`}
+                  >
+                    {item.date}
+                  </span>
+                  <h3 className="text-xl font-semibold mt-2">{item.title}</h3>
+                  <p className="text-sm text-gray-700 mt-1 mb-3 leading-snug">
                     {item.description}
                   </p>
-                  <p className="font-medium text-sm mb-1">
-                    <span className="text-[#0A1F44] font-semibold">
-                      Marks Allocated:
-                    </span>{" "}
-                    {item.marks}
+                  <p className="text-sm font-medium text-[#0A1F44]">
+                    Marks Allocated:{' '}
+                    <span className="font-semibold">{item.marks}</span>
                   </p>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="w-full bg-gray-200 rounded-full h-3 mt-2">
                     <div
                       className={`h-3 rounded-full bg-gradient-to-r ${item.progressColor}`}
-                      style={{
-                        width: `${item.progress * (100 / 40)}%`,
-                      }}
+                      style={{ width: `${item.progress * (100 / 40)}%` }}
                     ></div>
                   </div>
-                  <p className="text-sm text-right mt-1 font-medium text-[#38BDF8]">
+                  <p className="text-right text-sm mt-1 text-[#38BDF8] font-medium">
                     {item.progress}%
                   </p>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
