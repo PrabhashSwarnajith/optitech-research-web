@@ -1,34 +1,38 @@
-import React from "react";
-import { MonitorPlay } from "lucide-react";
+import React from 'react';
+import { MonitorPlay } from 'lucide-react';
 
 const presentations = [
   {
-    title: "Proposal Presentation",
-    submitted: "2024/03/20",
-    type: "Individual",
-    link: "#",
-    description: "Introduces project goals, methodology, and initial research foundation.",
+    title: 'Proposal Presentation',
+    submitted: '2024/08/12',
+    type: 'Group',
+    link: 'https://docs.google.com/presentation/d/1Sb34-vI4eFYlUm2yrHYfNL-jkOkI9p7n/edit?usp=drive_link&ouid=109728648207284349626&rtpof=true&sd=true',
+    description:
+      'Covers initial objectives, scope, and planned methodology for the project.',
   },
   {
-    title: "Progress Presentation I",
-    submitted: "2024/06/05",
-    type: "Group",
-    link: "#",
-    description: "Mid-term update highlighting completed modules, feedback, and challenges.",
+    title: 'Progress Presentation I',
+    submitted: '2024/12/04',
+    type: 'Group',
+    link: 'https://docs.google.com/presentation/d/1IUX0c-SExuxqYc9DqUlX0NQog98CSt4h/edit?usp=drive_link&ouid=109728648207284349626&rtpof=true&sd=true',
+    description:
+      'Presents approximately 50% completion, showcasing key features and received feedback.',
   },
   {
-    title: "Final Presentation",
-    submitted: "2024/08/12",
-    type: "Individual",
-    link: "#",
-    description: "Summarizes the completed system, results, and lessons learned.",
+    title: 'Progress Presentation II',
+    submitted: '2025/03/18',
+    type: 'Group',
+    link: 'https://docs.google.com/presentation/d/1sgYN0e0PEhxjlEJAl8tg3N_zsUDvjvxp/edit?usp=drive_link&ouid=109728648207284349626&rtpof=true&sd=true',
+    description:
+      'Highlights around 90% project completion, refined design, and testing outcomes.',
   },
   {
-    title: "Poster Presentation",
-    submitted: "2024/08/13",
-    type: "Group",
-    link: "#",
-    description: "Visually summarizes the entire project for public and academic display.",
+    title: 'Final Presentation',
+    submitted: '2025/05/07',
+    type: 'Group',
+    link: 'https://drive.google.com/drive/folders/1WtdJ-5Pf3bq3uNX3EMNPEzG4WKAJFOgx?usp=drive_link',
+    description:
+      'Final project delivery with system demo, research findings, and overall conclusions.',
   },
 ];
 
@@ -41,7 +45,8 @@ const Presentations = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-4">Presentations</h2>
         <p className="text-sm text-gray-700 mb-10">
-          Below are all the submitted presentation materials related to this project.
+          Below are all the submitted presentation materials related to this
+          project.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -59,7 +64,9 @@ const Presentations = () => {
                 </h3>
               </div>
 
-              <p className="text-sm text-gray-600 italic mb-2">{item.description}</p>
+              <p className="text-sm text-gray-600 italic mb-2">
+                {item.description}
+              </p>
 
               <p className="text-sm text-gray-600 mb-4">
                 Submitted on {item.submitted}
