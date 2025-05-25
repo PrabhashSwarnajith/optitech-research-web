@@ -10,9 +10,9 @@ const milestones = [
       'A Proposal Presentation is a formal presentation that explains a planned project, its purpose, and how it will be carried out.',
     marks: 6,
     progress: 6,
-    badgeColor: 'bg-[#4169E1]',
-    badgeColorHex: '#4169E1',
-    progressColor: 'from-[#4169E1] to-[#38BDF8]',
+    badgeColor: 'bg-[#6366F1]',
+    badgeColorHex: '#6366F1',
+    progressColor: 'from-[#6366F1] to-[#8B5CF6]',
   },
   {
     date: 'December 2024',
@@ -21,9 +21,9 @@ const milestones = [
       'Formal presentation demonstrating ~50% development progress, key feature demo, and live Q&A.',
     marks: 15,
     progress: 15,
-    badgeColor: 'bg-[#38BDF8]',
-    badgeColorHex: '#38BDF8',
-    progressColor: 'from-[#38BDF8] to-[#0EA5E9]',
+    badgeColor: 'bg-[#0EA5E9]',
+    badgeColorHex: '#0EA5E9',
+    progressColor: 'from-[#0EA5E9] to-[#38BDF8]',
   },
   {
     date: 'March 2025',
@@ -32,9 +32,9 @@ const milestones = [
       'Demonstrate 90% project completion with system functionality, UI/UX quality, and commercial readiness.',
     marks: 18,
     progress: 18,
-    badgeColor: 'bg-[#0A1F44]',
-    badgeColorHex: '#0A1F44',
-    progressColor: 'from-[#0A1F44] to-[#1E3A8A]',
+    badgeColor: 'bg-[#14B8A6]',
+    badgeColorHex: '#14B8A6',
+    progressColor: 'from-[#14B8A6] to-[#2DD4BF]',
   },
   {
     date: 'March 2025',
@@ -43,9 +43,9 @@ const milestones = [
       'An academic document presenting results from your investigation into a targeted problem area.',
     marks: 10,
     progress: 10,
-    badgeColor: 'bg-[#6366F1]',
-    badgeColorHex: '#6366F1',
-    progressColor: 'from-[#6366F1] to-[#A855F7]',
+    badgeColor: 'bg-[#E11D48]',
+    badgeColorHex: '#E11D48',
+    progressColor: 'from-[#E11D48] to-[#FB7185]',
   },
   {
     date: 'March 2025',
@@ -90,10 +90,13 @@ const Milestones = () => {
   return (
     <section
       id="Milestones"
-      className="min-h-screen bg-[#F9F6F1] text-[#0A1F44] py-20 px-4 sm:px-6 md:px-10"
+      className="min-h-screen bg-gradient-to-b from-[#F0F4F8] to-[#FFFFFF] text-[#0A1F44] py-20 px-4 sm:px-6 md:px-10"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-16 text-center" data-aos="zoom-in">
+        <h2
+          className="text-4xl font-bold mb-16 text-center text-[#0F172A]"
+          data-aos="zoom-in"
+        >
           Timeline in Brief
         </h2>
 
@@ -104,8 +107,8 @@ const Milestones = () => {
             return (
               <div
                 key={index}
-                className={`relative mb-5 flex items-center ${
-                  isLeft ? 'justify-start' : 'justify-end'
+                className={`relative mb-10 flex flex-col md:flex-row items-center ${
+                  isLeft ? 'md:justify-start' : 'md:justify-end'
                 }`}
                 data-aos={isLeft ? 'fade-right' : 'fade-left'}
                 data-aos-delay={index * 100}
@@ -118,8 +121,8 @@ const Milestones = () => {
 
                 {/* Timeline Card */}
                 <div
-                  className={`w-full max-w-md px-6 py-4 bg-white rounded-xl shadow-lg border-t-4 ${
-                    isLeft ? 'ml-10' : 'mr-10'
+                  className={`w-full md:max-w-md px-6 py-4 bg-white rounded-xl shadow-lg border-t-4 ${
+                    isLeft ? 'md:ml-12 mt-10 md:mt-0' : 'md:mr-12 mt-10 md:mt-0'
                   }`}
                   style={{ borderColor: item.badgeColorHex }}
                 >
@@ -139,10 +142,10 @@ const Milestones = () => {
                   <div className="w-full bg-gray-200 rounded-full h-3 mt-2">
                     <div
                       className={`h-3 rounded-full bg-gradient-to-r ${item.progressColor}`}
-                      style={{ width: `${item.progress * (100 / 40)}%` }}
+                      style={{ width: `${(item.progress / 40) * 100}%` }}
                     ></div>
                   </div>
-                  <p className="text-right text-sm mt-1 text-[#38BDF8] font-medium">
+                  <p className="text-right text-sm mt-1 text-[#0EA5E9] font-medium">
                     {item.progress}%
                   </p>
                 </div>
