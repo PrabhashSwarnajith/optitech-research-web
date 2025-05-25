@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MonitorPlay } from 'lucide-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const presentations = [
   {
     title: 'Proposal Presentation',
     submitted: '2024/08/12',
     type: 'Group',
-    link: 'https://docs.google.com/presentation/d/1Sb34-vI4eFYlUm2yrHYfNL-jkOkI9p7n/edit?usp=drive_link&ouid=109728648207284349626&rtpof=true&sd=true',
+    link: 'https://docs.google.com/presentation/d/1Sb34-vI4eFYlUm2yrHYfNL-jkOkI9p7n/edit?usp=drive_link',
     description:
       'Covers initial objectives, scope, and planned methodology for the project.',
   },
@@ -14,7 +16,7 @@ const presentations = [
     title: 'Progress Presentation I',
     submitted: '2024/12/04',
     type: 'Group',
-    link: 'https://docs.google.com/presentation/d/1IUX0c-SExuxqYc9DqUlX0NQog98CSt4h/edit?usp=drive_link&ouid=109728648207284349626&rtpof=true&sd=true',
+    link: 'https://docs.google.com/presentation/d/1IUX0c-SExuxqYc9DqUlX0NQog98CSt4h/edit?usp=drive_link',
     description:
       'Presents approximately 50% completion, showcasing key features and received feedback.',
   },
@@ -22,7 +24,7 @@ const presentations = [
     title: 'Progress Presentation II',
     submitted: '2025/03/18',
     type: 'Group',
-    link: 'https://docs.google.com/presentation/d/1sgYN0e0PEhxjlEJAl8tg3N_zsUDvjvxp/edit?usp=drive_link&ouid=109728648207284349626&rtpof=true&sd=true',
+    link: 'https://docs.google.com/presentation/d/1sgYN0e0PEhxjlEJAl8tg3N_zsUDvjvxp/edit?usp=drive_link',
     description:
       'Highlights around 90% project completion, refined design, and testing outcomes.',
   },
@@ -37,28 +39,40 @@ const presentations = [
 ];
 
 const Presentations = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
     <section
       id="Presentations"
-      className="min-h-screen bg-[#F0F8FF] text-[#0A1F44] py-20 px-6 sm:px-10 md:px-20"
+      className="min-h-screen bg-gradient-to-b from-[#E0F2FE] to-white text-[#0A1F44] py-20 px-6 sm:px-10 md:px-20"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4">Presentations</h2>
-        <p className="text-sm text-gray-700 mb-10">
+        <h2
+          className="text-4xl font-bold mb-4 text-center text-[#3B82F6]"
+          data-aos="zoom-in"
+        >
+          Presentations
+        </h2>
+        <p
+          className="text-sm text-gray-700 mb-10 text-center"
+          data-aos="fade-up"
+        >
           Below are all the submitted presentation materials related to this
           project.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {presentations.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md border border-gray-200 p-5 flex flex-col justify-between min-h-[240px] hover:shadow-lg transition-shadow"
+              className="bg-white rounded-xl shadow-md border border-gray-100 p-5 flex flex-col justify-between hover:shadow-lg transition-shadow"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               <div className="flex items-center gap-2 mb-4">
-                <MonitorPlay className="w-5 h-5 text-[#4169E1]" />
+                <MonitorPlay className="w-5 h-5 text-[#6366F1]" />
                 <h3 className="text-md font-semibold text-[#0A1F44]">
                   {item.title}
                 </h3>
@@ -76,9 +90,11 @@ const Presentations = () => {
                 <span className="text-xs text-gray-500">{item.type}</span>
                 <a
                   href={item.link}
-                  className="text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#4169E1] to-[#38BDF8] hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#6366F1] to-[#06B6D4] hover:underline"
                 >
-                  Download
+                  View
                 </a>
               </div>
             </div>
