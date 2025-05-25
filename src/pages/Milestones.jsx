@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 
 const milestones = [
   {
-    date: 'December 2024',
+    date: 'August 2024',
     title: 'Proposal Presentation',
     description:
       'A Proposal Presentation is a formal presentation that explains a planned project, its purpose, and how it will be carried out.',
