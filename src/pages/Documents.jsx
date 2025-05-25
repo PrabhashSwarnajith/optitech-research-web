@@ -1,55 +1,50 @@
-import React from "react";
-import { FileText } from "lucide-react";
+import React from 'react';
+import { FileText } from 'lucide-react';
 
 const documents = [
   {
-    title: "Project Charter",
-    submitted: "2024/02/15",
-    type: "Group",
-    link: "#",
-    description: "Outlines the project's scope, goals, roles, and responsibilities.",
+    title: 'Topic Assessment',
+    submitted: '2024/02/15',
+    type: 'Group',
+    link: 'https://drive.google.com/drive/folders/1eidRRj4UAsDGYpmiYiI-bfhAeoZPlj82?usp=drive_link',
+    description:
+      'Initial topic evaluation outlining relevance and feasibility.',
   },
   {
-    title: "Proposal Document",
-    submitted: "2024/03/15",
-    type: "Individual",
-    link: "#",
-    description: "Detailed proposal including objectives, timeline, and technologies.",
+    title: 'Project Charter',
+    submitted: '2024/02/15',
+    type: 'Group',
+    link: 'https://drive.google.com/drive/folders/1AavcRUKQOW1JLYetqa5mMVEP7Uqxygp7?usp=drive_link',
+    description:
+      "Defines the project's purpose, scope, and key responsibilities.",
   },
   {
-    title: "Check List Documents",
-    submitted: "Pending",
-    type: "Group",
-    link: "#",
-    description: "Submission checklist for final project deliverables.",
+    title: 'Proposal Document',
+    submitted: '2024/03/15',
+    type: 'Individual',
+    link: 'https://drive.google.com/drive/folders/1XLleeTMqQyygWFgt9LIk9g3yaxREHWNz?usp=drive_link',
+    description: 'Explains project goals, timeline, and chosen technologies.',
   },
   {
-    title: "Final Document - Main",
-    submitted: "2024/08/10",
-    type: "Individual",
-    link: "#",
-    description: "Comprehensive report including methodology, results, and discussion.",
+    title: 'Check List Documents',
+    submitted: 'Pending',
+    type: 'Group',
+    link: 'https://drive.google.com/drive/folders/1KtCql3jyObMObHVpjbY4W52l-1Nb4Xw-?usp=drive_link',
+    description: 'Checklist to ensure all final deliverables are included.',
   },
   {
-    title: "Final Document - Appendix A",
-    submitted: "2024/08/10",
-    type: "Group",
-    link: "#",
-    description: "Includes supporting diagrams, workflows, and system architecture.",
+    title: 'Final Document - Main',
+    submitted: '2025/04/11',
+    type: 'Individual',
+    link: 'https://drive.google.com/drive/folders/1UZ_SoCiXWdR4GEtk9qfsCMWmEtw-4Dkx?usp=drive_link',
+    description: 'Detailed report covering research, analysis, and outcomes.',
   },
   {
-    title: "Final Document - Appendix B",
-    submitted: "2024/08/10",
-    type: "Group",
-    link: "#",
-    description: "Supplementary data including tables and charts used in the study.",
-  },
-  {
-    title: "Final Document - Plagiarism Report",
-    submitted: "2024/08/10",
-    type: "Group",
-    link: "#",
-    description: "Verifies the originality of submitted written work.",
+    title: 'Final Document - Main (Group)',
+    submitted: '2025/04/11',
+    type: 'Group',
+    link: 'https://drive.google.com/drive/folders/1CxYS2c5marfltrGiOTv6Y6Jn_6s-wo1Q?usp=drive_link',
+    description: 'Final group submission combining all project components.',
   },
 ];
 
@@ -62,7 +57,8 @@ const Documents = () => {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-4">Documents</h2>
         <p className="text-sm text-gray-700 mb-10">
-          This section lists all documents related to your academic project. Use the links provided to view or download submitted files.
+          This section lists all documents related to your academic project. Use
+          the links provided to view or download submitted files.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -85,8 +81,8 @@ const Documents = () => {
               </p>
 
               <p className="text-sm text-gray-600 mb-4">
-                {doc.submitted === "Pending"
-                  ? "Yet to be submitted"
+                {doc.submitted === 'Pending'
+                  ? 'Yet to be submitted'
                   : `Submitted on ${doc.submitted}`}
               </p>
 
