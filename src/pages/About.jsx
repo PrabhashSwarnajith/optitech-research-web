@@ -11,6 +11,8 @@ const supervisors = [
     affiliation: 'Sri Lanka Institute of Information Technology',
     department: 'Information Technology',
     image: '/images/Namalie.png',
+    email: 'namalie.w@sliit.lk',
+    linkedin: 'https://www.linkedin.com/in/namalie/',
   },
   {
     name: 'Ms. Rivoni De Zoysa',
@@ -18,6 +20,8 @@ const supervisors = [
     affiliation: 'Sri Lanka Institute of Information Technology',
     department: 'Software Engineering',
     image: '/images/Rivoni.png',
+    email: 'rivoni.d@sliit.lk',
+    linkedin: 'https://www.linkedin.com/in/rivoni-poojima-98237321b/',
   },
 ];
 
@@ -28,6 +32,8 @@ const students = [
     affiliation: 'SLIIT - Faculty of Computing',
     department: 'Information Technology',
     image: '/images/sahan1.png',
+    email: 'it21334924@my.sliit.lk',
+    linkedin: 'https://www.linkedin.com/in/sahan-herath-b9b187191/',
   },
   {
     name: 'Swarnajith T H M P',
@@ -35,6 +41,8 @@ const students = [
     affiliation: 'SLIIT - Faculty of Computing',
     department: 'Information Technology',
     image: '/images/placeholder-profile.png',
+    email: 'it21253676@my.sliit.lk',
+    linkedin: 'https://www.linkedin.com/in/prabhash-swarnajith/',
   },
   {
     name: 'Senanayaka W S H M',
@@ -42,6 +50,8 @@ const students = [
     affiliation: 'SLIIT - Faculty of Computing',
     department: 'Information Systems',
     image: '/images/image.png',
+    email: 'it21341540@my.sliit.lk',
+    linkedin: 'https://www.linkedin.com/in/heshan-senanayaka/',
   },
   {
     name: 'Hettiarachchi H W R A',
@@ -49,6 +59,8 @@ const students = [
     affiliation: 'SLIIT - Faculty of Computing',
     department: 'Information Technology',
     image: '/images/Rashmika.jpg',
+    email: 'it21340796@my.sliit.lk',
+    linkedin: 'https://www.linkedin.com/in/rashmika-hettiarachchi-/',
   },
 ];
 
@@ -81,7 +93,7 @@ const About = () => {
           {supervisors.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md overflow-hidden text-center border border-gray-100 w-[280px] hover:shadow-xl transition duration-300"
+              className="bg-white rounded-2xl shadow-xl overflow-hidden text-center border border-gray-200 w-[300px] hover:shadow-2xl transition duration-300"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -91,18 +103,36 @@ const About = () => {
                 className="w-full h-64 object-cover"
                 onError={(e) => (e.target.src = placeholder)}
               />
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-[#0A1F44]">
+              <div className="p-6 space-y-2">
+                <h3 className="text-xl font-bold text-[#0A1F44]">
                   {member.name}
                 </h3>
-                <span className="inline-block mt-1 mb-2 text-xs bg-[#4F46E5] text-white px-3 py-1 rounded-full">
+                <span className="inline-block text-xs bg-[#4F46E5] text-white px-3 py-1 rounded-full">
                   {member.role}
                 </span>
                 <p className="text-sm text-gray-600">{member.affiliation}</p>
-                <p className="text-sm font-medium mt-1 text-gray-800">
+                <p className="text-sm font-medium text-gray-800">
                   Department:{' '}
                   <span className="text-[#1E3A8A]">{member.department}</span>
                 </p>
+                <div className="flex justify-center gap-3 pt-2">
+                  <a
+                    href={`mailto:${member.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs px-4 py-1 rounded-full bg-[#2563EB] text-white hover:bg-[#1D4ED8] transition"
+                  >
+                    Email
+                  </a>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs px-4 py-1 rounded-full bg-[#06B6D4] text-white hover:bg-[#0891B2] transition"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
           ))}
@@ -119,7 +149,7 @@ const About = () => {
           {students.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md overflow-hidden text-center border border-gray-100 hover:shadow-xl transition duration-300"
+              className="bg-white rounded-2xl shadow-xl overflow-hidden text-center border border-gray-200 hover:shadow-2xl transition duration-300"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -129,18 +159,36 @@ const About = () => {
                 className="w-full h-60 object-cover"
                 onError={(e) => (e.target.src = placeholder)}
               />
-              <div className="p-5">
-                <h3 className="text-lg font-semibold text-[#0A1F44]">
+              <div className="p-5 space-y-2">
+                <h3 className="text-xl font-semibold text-[#0A1F44]">
                   {member.name}
                 </h3>
-                <span className="inline-block mt-1 mb-2 text-xs bg-[#06B6D4] text-white px-3 py-1 rounded-full">
+                <span className="inline-block text-xs bg-[#06B6D4] text-white px-3 py-1 rounded-full">
                   {member.role}
                 </span>
                 <p className="text-sm text-gray-600">{member.affiliation}</p>
-                <p className="text-sm font-medium text-gray-800 mt-1">
+                <p className="text-sm font-medium text-gray-800">
                   Department:{' '}
                   <span className="text-[#1E3A8A]">{member.department}</span>
                 </p>
+                <div className="flex justify-center gap-3 pt-2">
+                  <a
+                    href={`mailto:${member.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs px-4 py-1 rounded-full bg-[#2563EB] text-white hover:bg-[#1D4ED8] transition"
+                  >
+                    Email
+                  </a>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs px-4 py-1 rounded-full bg-[#06B6D4] text-white hover:bg-[#0891B2] transition"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
           ))}
