@@ -63,7 +63,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F6F1] text-[#0A1F44] flex items-center justify-center py-20 px-5">
+    <section id="Contact" className="min-h-screen bg-[#F9F6F1] text-[#0A1F44] flex items-center justify-center py-20 px-5">
       <div className="w-full max-w-6xl grid md:grid-cols-2 gap-12">
         {/* Contact Form */}
         <div
@@ -74,10 +74,10 @@ const Contact = () => {
           <div className="flex justify-between items-start mb-6">
             <div>
               <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#4169E1] to-[#38BDF8]">
-                Contact Me
+                Contact Us
               </h2>
               <p className="text-[#333333] mt-1 text-sm">
-                Got a question? Send me a message, and I’ll get back to you soon.
+                Got a question? Send us a message and we’ll respond promptly.
               </p>
             </div>
             <Share2 className="w-6 h-6 text-[#4169E1] opacity-80" />
@@ -94,7 +94,7 @@ const Contact = () => {
 
             {/* Name */}
             <div className="relative">
-              <User className="absolute left-4 top-4 text-gray-400" />
+              <User className="absolute left-4 top-4 text-[#9CA3AF]" />
               <input
                 type="text"
                 name="name"
@@ -103,13 +103,13 @@ const Contact = () => {
                 onChange={handleChange}
                 disabled={isSubmitting}
                 required
-                className="w-full pl-12 py-3 bg-white text-[#0A1F44] rounded-lg border border-gray-300 focus:border-[#4169E1] placeholder-gray-400 outline-none"
+                className="w-full pl-12 py-3 bg-white text-[#0A1F44] rounded-lg border border-gray-300 focus:border-[#4169E1] placeholder-[#9CA3AF] outline-none"
               />
             </div>
 
             {/* Email */}
             <div className="relative">
-              <Mail className="absolute left-4 top-4 text-gray-400" />
+              <Mail className="absolute left-4 top-4 text-[#9CA3AF]" />
               <input
                 type="email"
                 name="email"
@@ -118,13 +118,13 @@ const Contact = () => {
                 onChange={handleChange}
                 disabled={isSubmitting}
                 required
-                className="w-full pl-12 py-3 bg-white text-[#0A1F44] rounded-lg border border-gray-300 focus:border-[#4169E1] placeholder-gray-400 outline-none"
+                className="w-full pl-12 py-3 bg-white text-[#0A1F44] rounded-lg border border-gray-300 focus:border-[#4169E1] placeholder-[#9CA3AF] outline-none"
               />
             </div>
 
             {/* Message */}
             <div className="relative">
-              <MessageSquare className="absolute left-4 top-4 text-gray-400" />
+              <MessageSquare className="absolute left-4 top-4 text-[#9CA3AF]" />
               <textarea
                 name="message"
                 placeholder="Your Message"
@@ -132,7 +132,7 @@ const Contact = () => {
                 onChange={handleChange}
                 disabled={isSubmitting}
                 required
-                className="w-full pl-12 py-3 h-32 resize-none bg-white text-[#0A1F44] rounded-lg border border-gray-300 focus:border-[#4169E1] placeholder-gray-400 outline-none"
+                className="w-full pl-12 py-3 h-32 resize-none bg-white text-[#0A1F44] rounded-lg border border-gray-300 focus:border-[#4169E1] placeholder-[#9CA3AF] outline-none"
               />
             </div>
 
@@ -154,15 +154,15 @@ const Contact = () => {
           data-aos="fade-left"
           data-aos-duration="1200"
         >
-          <h3 className="text-xl font-semibold text-[#0A1F44]">Contact Details</h3>
-          <p className="text-[#4169E1] break-all">prabhashswarnajith@gmail.com</p>
-          <p className="text-[#333333] max-w-md">
-            Hope this project helped you in some manner. Thank you!
+          <h3 className="text-xl font-semibold">Contact Details</h3>
+          <p className="text-[#4169E1] break-all font-medium">prabhashswarnajith@gmail.com</p>
+          <p className="text-[#333333] max-w-md text-sm">
+            We’d love to hear your feedback or answer any inquiries related to the project.
           </p>
-          <p className="text-[#0A1F44] font-medium">– Team CocoRemedy</p>
+          <p className="text-[#0A1F44] font-medium">— Team Optitech</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
