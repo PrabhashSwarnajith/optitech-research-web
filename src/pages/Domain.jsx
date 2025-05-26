@@ -2,16 +2,26 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import python from '../assets/tech/python.png';
+import html from '../assets/tech/html.png';
+import javascript from '../assets/tech/javascript.png';
+import css from '../assets/tech/css.png';
+import tensorflow from '../assets/tech/tensorflow.png';
+import keras from '../assets/tech/keras.png';
+import gcloud from '../assets/tech/gcloud.png';
+import flask from '../assets/tech/flask.png';
+import opencv from '../assets/tech/opencv.png';
+
 const technologies = [
-  { name: 'Python', file: 'python.png' },
-  { name: 'HTML', file: 'html.png' },
-  { name: 'JavaScript', file: 'javascript.png' },
-  { name: 'CSS', file: 'css.png' },
-  { name: 'TensorFlow', file: 'tensorflow.png' },
-  { name: 'Keras', file: 'keras.png' },
-  { name: 'Google Cloud', file: 'gcloud.png' },
-  { name: 'Flask', file: 'flask.png' },
-  { name: 'OpenCV', file: 'opencv.png' },
+  { name: 'Python', file: python },
+  { name: 'HTML', file: html },
+  { name: 'JavaScript', file: javascript },
+  { name: 'CSS', file: css },
+  { name: 'TensorFlow', file: tensorflow },
+  { name: 'Keras', file: keras },
+  { name: 'Google Cloud', file: gcloud },
+  { name: 'Flask', file: flask },
+  { name: 'OpenCV', file: opencv },
 ];
 
 const Domain = () => {
@@ -365,7 +375,7 @@ const Domain = () => {
                 >
                   <div className="bg-white rounded-full shadow-md w-20 h-20 p-3 flex items-center justify-center hover:scale-105 transition">
                     <img
-                      src={`/images/tech/${tech.file}`}
+                      src={tech.file}
                       alt={tech.name}
                       className="w-full h-full object-contain"
                     />
