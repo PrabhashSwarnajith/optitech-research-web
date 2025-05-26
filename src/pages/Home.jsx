@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import background from '../assets/images/background.jpg';
+import background from '../assets/background.jpg';
 
 const TypewriterEffect = ({ text }) => {
   const [displayText, setDisplayText] = useState('');
