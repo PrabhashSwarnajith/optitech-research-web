@@ -11,6 +11,7 @@ import keras from '../assets/tech/keras.png';
 import gcloud from '../assets/tech/gcloud.png';
 import flask from '../assets/tech/flask.png';
 import opencv from '../assets/tech/opencv.png';
+import methodology from '../assets/methodology-eye.png';
 
 const technologies = [
   { name: 'Python', file: python },
@@ -334,7 +335,7 @@ const Domain = () => {
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div data-aos="fade-right">
                 <img
-                  src="/images/methodology-eye.png"
+                  src={methodology}
                   alt="Eye Health"
                   className="w-full max-w-md mx-auto rounded-xl shadow-md"
                 />
