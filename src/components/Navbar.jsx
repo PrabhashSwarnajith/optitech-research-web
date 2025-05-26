@@ -5,21 +5,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('Home');
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   const navItems = [
     { href: '#Home', label: 'Home' },
     {
       href: '#Domain',
       label: 'Domain',
-      subtopics: [
-        { href: '#Literature', label: 'Literature Survey' },
-        { href: '#Gap', label: 'Research Gap' },
-        { href: '#Problem', label: 'Research Problem' },
-        { href: '#Objectives', label: 'Research Objectives' },
-        { href: '#Methodology', label: 'Methodology' },
-        { href: '#Technologies', label: 'Technologies Used' },
-      ],
     },
     { href: '#Milestones', label: 'Milestones' },
     { href: '#Documents', label: 'Documents' },
@@ -28,34 +20,35 @@ const Navbar = () => {
     { href: '#Contact', label: 'Contact us' },
   ];
 
+  // Scroll Detection & Active Section Highlight
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+
       const sections = navItems
         .flatMap((item) =>
           item.subtopics ? [item, ...item.subtopics] : [item]
         )
         .map((item) => {
-          const section = document.querySelector(item.href);
-          if (section) {
+          const el = document.querySelector(item.href);
+          if (el) {
+            const rect = el.getBoundingClientRect();
             return {
               id: item.href.replace('#', ''),
-              offset: section.offsetTop - 550,
-              height: section.offsetHeight,
+              top: rect.top + window.scrollY,
+              height: rect.height,
             };
           }
           return null;
         })
         .filter(Boolean);
 
-      const currentPosition = window.scrollY;
-      const active = sections.find(
-        (section) =>
-          currentPosition >= section.offset &&
-          currentPosition < section.offset + section.height
+      const scrollY = window.scrollY + 200;
+      const current = sections.find(
+        (s) => scrollY >= s.top && scrollY < s.top + s.height
       );
 
-      if (active) setActiveSection(active.id);
+      if (current) setActiveSection(current.id);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -102,6 +95,7 @@ const Navbar = () => {
             OptiTech
           </a>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-8 flex items-center space-x-8">
               {navItems.map((item) =>
@@ -153,6 +147,7 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Mobile Menu Toggle */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -170,6 +165,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Navigation Menu */}
       <div
         className={`md:hidden fixed inset-x-0 bg-[#0A1F44] transition-all duration-300 ease-in-out ${
           isOpen
@@ -183,17 +179,21 @@ const Navbar = () => {
             item.subtopics ? (
               <div key={item.label}>
                 <button
-                  onClick={() => setDropdownOpen(!isDropdownOpen)}
+                  onClick={() =>
+                    setOpenDropdown(
+                      openDropdown === item.label ? null : item.label
+                    )
+                  }
                   className="w-full flex items-center justify-between px-4 py-3 text-lg font-medium text-[#E0E7FF] hover:text-white"
                 >
                   {item.label}
                   <ChevronDown
                     className={`w-4 h-4 transition-transform ${
-                      isDropdownOpen ? 'rotate-180' : 'rotate-0'
+                      openDropdown === item.label ? 'rotate-180' : 'rotate-0'
                     }`}
                   />
                 </button>
-                {isDropdownOpen && (
+                {openDropdown === item.label && (
                   <div className="ml-4 border-l border-white/20 pl-4">
                     {item.subtopics.map((sub, i) => (
                       <a
