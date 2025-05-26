@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import background from '../assets/images/background.jpg';
 
 const TypewriterEffect = ({ text }) => {
   const [displayText, setDisplayText] = useState('');
@@ -38,7 +39,7 @@ const Home = () => {
       id="Home"
       className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 sm:px-10 md:px-20 relative bg-white py-20"
       style={{
-        backgroundImage: "url('/images/background.jpg')",
+        backgroundImage: `url(${background})`,
         backgroundSize: 'cover',
         backgroundPosition: 'right center',
         backgroundRepeat: 'no-repeat',
