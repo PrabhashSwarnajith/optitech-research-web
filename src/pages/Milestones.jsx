@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 
 const milestones = [
   {
-    date: 'August 2024',
+    date: 'August 16th 2024',
     title: 'Proposal Presentation',
     description:
       'A Proposal Presentation is a formal presentation that explains a planned project, its purpose, and how it will be carried out.',
@@ -15,7 +15,7 @@ const milestones = [
     progressColor: 'from-[#6366F1] to-[#8B5CF6]',
   },
   {
-    date: 'December 2024',
+    date: 'December 06th 2024',
     title: 'Progress Presentation I',
     description:
       'Formal presentation demonstrating ~50% development progress, key feature demo, and live Q&A.',
@@ -26,7 +26,7 @@ const milestones = [
     progressColor: 'from-[#0EA5E9] to-[#38BDF8]',
   },
   {
-    date: 'March 2025',
+    date: 'March 20th 2025',
     title: 'Progress Presentation II',
     description:
       'Demonstrate 90% project completion with system functionality, UI/UX quality, and commercial readiness.',
@@ -37,7 +37,7 @@ const milestones = [
     progressColor: 'from-[#14B8A6] to-[#2DD4BF]',
   },
   {
-    date: 'March 2025',
+    date: 'March 20th 2025',
     title: 'Research Paper',
     description:
       'An academic document presenting results from your investigation into a targeted problem area.',
@@ -48,8 +48,8 @@ const milestones = [
     progressColor: 'from-[#E11D48] to-[#FB7185]',
   },
   {
-    date: 'March 2025',
-    title: 'Final Report',
+    date: 'May 26th 2025',
+    title: 'Final Assessment & Viva',
     description:
       'A formal report documenting the complete project journey from design to evaluation.',
     marks: 19,
@@ -59,18 +59,7 @@ const milestones = [
     progressColor: 'from-[#A855F7] to-[#D946EF]',
   },
   {
-    date: 'May 2025',
-    title: 'Final Presentation',
-    description:
-      'Assesses the complete product and individual contributions through a live demo and Q&A.',
-    marks: 20,
-    progress: 20,
-    badgeColor: 'bg-[#22C55E]',
-    badgeColorHex: '#22C55E',
-    progressColor: 'from-[#22C55E] to-[#4ADE80]',
-  },
-  {
-    date: 'May 2025',
+    date: 'May 26th 2025',
     title: 'Project Website',
     description:
       'An online platform summarizing the system, features, and research in a structured format.',
