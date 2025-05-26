@@ -29,19 +29,36 @@ const Domain = () => {
       >
         <div className="max-w-7xl mx-auto space-y-10">
           {/* LITERATURE SURVEY */}
-          <div id="Literature" className="scroll-mt-20" data-aos="fade-up">
-            <h2 className="text-4xl font-bold text-center text-indigo-700 mb-10">
+          <div
+            id="Literature"
+            className="scroll-mt-20 py-20 px-6 sm:px-10 md:px-20"
+            data-aos="fade-up"
+          >
+            <h2
+              className="text-4xl font-bold text-center text-indigo-700 mb-10"
+              data-aos="fade-down"
+              data-aos-delay="100"
+            >
               Literature Survey
             </h2>
-            <div className="bg-white rounded-xl shadow-lg border-l-4 border-indigo-400 p-6 md:p-8">
-              <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                he field of ophthalmic diagnostics has seen substantial progress
-                with the adoption of artificial intelligence and computer
-                vision. Initial efforts in automated cataract detection utilized
-                classical machine learning techniques, where features such as
-                texture, wavelet coefficients, and local standard deviations
-                were extracted from fundus images and fed into models like
-                Linear Discriminant Analysis and Backpropagation Neural
+
+            <div
+              className="bg-white rounded-xl shadow-lg border-l-4 border-indigo-400 p-6 md:p-8"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <p
+                className="text-gray-700 text-sm leading-relaxed mb-4"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                The field of ophthalmic diagnostics has seen substantial
+                progress with the adoption of artificial intelligence and
+                computer vision. Initial efforts in automated cataract detection
+                utilized classical machine learning techniques, where features
+                such as texture, wavelet coefficients, and local standard
+                deviations were extracted from fundus images and fed into models
+                like Linear Discriminant Analysis and Backpropagation Neural
                 Networks. While these approaches yielded promising outcomes,
                 they were limited by the need for manual feature extraction and
                 were not scalable for large datasets. With the advent of deep
@@ -61,22 +78,22 @@ const Domain = () => {
                 and YOLO, were explored but lacked adaptation for intraocular
                 tools. A recent breakthrough involved the application of the
                 Single Shot Detector (SSD), capable of detecting small surgical
-                instruments like handpieces and hooks even under distortion
-                marking the first such use in live eye surgery recordings. For
-                eye strain management, various systems have employed
-                webcam-based gaze tracking and blink rate analysis. Notably,
-                Kuwahara et al. used facial landmark detection to measure blink
-                frequency and visual fatigue, although their system depended
-                heavily on high-quality video input and controlled lighting
-                conditions. Other researchers like Wang et al. introduced
-                behavioral monitoring through facial expressions and head
-                movement, achieving decent accuracy but struggling under poor
-                lighting or when subjects wore glasses. Color Vision Deficiency
-                (CVD) detection has also evolved, with traditional Ishihara
-                tests now digitized for interactive web use. CNN-based systems
-                trained on modified Ishihara plates have shown promise in
-                distinguishing between types of color blindness like protanopia
-                and deuteranopia. However, many existing models lack
+                instruments like handpieces and hooks even under
+                distortion—marking the first such use in live eye surgery
+                recordings. For eye strain management, various systems have
+                employed webcam-based gaze tracking and blink rate analysis.
+                Notably, Kuwahara et al. used facial landmark detection to
+                measure blink frequency and visual fatigue, although their
+                system depended heavily on high-quality video input and
+                controlled lighting conditions. Other researchers like Wang et
+                al. introduced behavioral monitoring through facial expressions
+                and head movement, achieving decent accuracy but struggling
+                under poor lighting or when subjects wore glasses. Color Vision
+                Deficiency (CVD) detection has also evolved, with traditional
+                Ishihara tests now digitized for interactive web use. CNN-based
+                systems trained on modified Ishihara plates have shown promise
+                in distinguishing between types of color blindness like
+                protanopia and deuteranopia. However, many existing models lack
                 adaptability and real-time responsiveness, and often do not
                 account for variability in user devices or lighting conditions.
                 Recent works, such as that by Sun et al., utilized eye-tracking
@@ -85,37 +102,31 @@ const Domain = () => {
                 deficiency classification, though with limitations in broader
                 CVD detection and real-time deployment feasibility.
               </p>
-              <h4 className="font-semibold text-indigo-800 mb-2">
+
+              <h4
+                className="font-semibold text-indigo-800 mb-2"
+                data-aos="fade-left"
+                data-aos-delay="400"
+              >
                 IEEE References:
               </h4>
+
               <ul className="text-sm list-decimal list-inside space-y-1 text-gray-700">
-                <li>
-                  M. S. Junayed et al., "An Automated Cataract Detection," IEEE
-                  Access, vol. 9, pp. 10, 2021.
-                </li>
-                <li>
-                  X. Hu et al., “Attention-based segmentation for retinal
-                  analysis,” IEEE, 2023
-                </li>
-                <li>
-                  W. Sun, Y. Wang, and B. Hu, “Exploration of Eye Fatigue
-                  Detection Features and Algorithm Based on Eye-Tracking
-                  Signal,” MDPI Electronics, vol. 13, no. 10, 2024.
-                </li>
-                <li>
-                  Z. Lin et al., “Fatigue Detection via Visual Behavior
-                  Analysis,” ScienceDirect, Apr. 2022.
-                </li>
-                <li>
-                  <li>
-                    Z. Lin et al., “Fatigue Detection via Visual Behavior
-                    Analysis,” ScienceDirect, Apr. 2022.
+                {[
+                  `M. S. Junayed et al., "An Automated Cataract Detection," IEEE Access, vol. 9, pp. 10, 2021.`,
+                  `X. Hu et al., “Attention-based segmentation for retinal analysis,” IEEE, 2023`,
+                  `W. Sun, Y. Wang, and B. Hu, “Exploration of Eye Fatigue Detection Features and Algorithm Based on Eye-Tracking Signal,” MDPI Electronics, vol. 13, no. 10, 2024.`,
+                  `Z. Lin et al., “Fatigue Detection via Visual Behavior Analysis,” ScienceDirect, Apr. 2022.`,
+                  `X. Zhang, Y. Sugano, M. Fritz, and A. Bulling, “Appearance-Based Gaze Estimation in the Wild,” IEEE, 2017.`,
+                ].map((ref, index) => (
+                  <li
+                    key={index}
+                    data-aos="fade-right"
+                    data-aos-delay={500 + index * 100}
+                  >
+                    {ref}
                   </li>
-                </li>
-                <li>
-                  X. Zhang, Y. Sugano, M. Fritz, and A. Bulling,
-                  “Appearance-Based Gaze Estimation in the Wild,” IEEE, 2017.
-                </li>
+                ))}
               </ul>
             </div>
           </div>
