@@ -2,7 +2,7 @@
   "name": "optitech-research-web",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://prabhashswarnajith.github.io/optitech-research-web/",
+  "homepage": "https://prabhashswarnajith.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
