@@ -1,8 +1,14 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import namali from '../assets/namalie.png';
+import rivoni from '../assets/Rivoni.png';
+import sahan from '../assets/sahan1.png';
+import prabash from '../assets/prabash.jpg';
+import heshan from '../assets/image.png';
+import rashmika from '../assets/Rashmika.jpg';
 
-const placeholder = '/images/placeholder-profile.png';
+const placeholder = '/assets/';
 
 const supervisors = [
   {
@@ -10,7 +16,7 @@ const supervisors = [
     role: 'Supervisor',
     affiliation: 'Sri Lanka Institute of Information Technology',
     department: 'Information Technology',
-    image: '/images/Namalie.png',
+    image: namali,
     email: 'namalie.w@sliit.lk',
     linkedin: 'https://www.linkedin.com/in/namalie/',
   },
@@ -19,7 +25,7 @@ const supervisors = [
     role: 'Co-Supervisor',
     affiliation: 'Sri Lanka Institute of Information Technology',
     department: 'Software Engineering',
-    image: '/images/Rivoni.png',
+    image: rivoni,
     email: 'rivoni.d@sliit.lk',
     linkedin: 'https://www.linkedin.com/in/rivoni-poojima-98237321b/',
   },
@@ -31,7 +37,7 @@ const students = [
     role: 'Team Leader',
     affiliation: 'SLIIT - Faculty of Computing',
     department: 'Information Technology',
-    image: '/images/sahan1.png',
+    image: sahan,
     email: 'it21334924@my.sliit.lk',
     linkedin: 'https://www.linkedin.com/in/sahan-herath-b9b187191/',
   },
@@ -40,7 +46,7 @@ const students = [
     role: 'Team Member',
     affiliation: 'SLIIT - Faculty of Computing',
     department: 'Information Technology',
-    image: '/images/Prabash.jpg',
+    image: prabash,
     email: 'it21253676@my.sliit.lk',
     linkedin: 'https://www.linkedin.com/in/prabhash-swarnajith/',
   },
@@ -49,7 +55,7 @@ const students = [
     role: 'Team Member',
     affiliation: 'SLIIT - Faculty of Computing',
     department: 'Information Systems',
-    image: '/images/image.png',
+    image: heshan,
     email: 'it21341540@my.sliit.lk',
     linkedin: 'https://www.linkedin.com/in/heshan-senanayaka/',
   },
@@ -58,7 +64,7 @@ const students = [
     role: 'Team Member',
     affiliation: 'SLIIT - Faculty of Computing',
     department: 'Information Technology',
-    image: '/images/Rashmika.jpg',
+    image: rashmika,
     email: 'it21340796@my.sliit.lk',
     linkedin: 'https://www.linkedin.com/in/rashmika-hettiarachchi-/',
   },
