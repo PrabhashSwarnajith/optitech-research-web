@@ -83,12 +83,17 @@ const Milestones = () => {
     >
       <div className="max-w-6xl mx-auto">
         <h2
-          className="text-4xl font-bold mb-16 text-center text-[#0F172A]"
+          className="text-4xl font-bold mb-8 text-center text-[#0F172A]"
           data-aos="zoom-in"
         >
-          Timeline in Brief
+          Project Milestones
         </h2>
-
+        <p
+          className="text-sm text-gray-700 mb-10 text-center"
+          data-aos="fade-up"
+        >
+          A timeline of key project milestones, deliverables, and assessments.
+        </p>
         <div className="relative before:absolute before:left-1/2 before:top-0 before:bottom-0 before:w-1 before:bg-gray-300">
           {milestones.map((item, index) => {
             const isLeft = index % 2 === 0;
