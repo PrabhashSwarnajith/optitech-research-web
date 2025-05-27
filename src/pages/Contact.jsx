@@ -158,7 +158,9 @@ const Contact = () => {
           <h3 className="text-2xl font-semibold text-[#0F172A]">
             Contact Details
           </h3>
-          <p className="text-[#6366F1] font-medium break-all">info@sliit.lk</p>
+          <p className="text-[#6366F1] font-medium break-all">
+            optitechrp@gmail.com
+          </p>
           <p className="text-gray-600 max-w-md text-sm">
             We’d love to hear your feedback or answer any inquiries related to
             the project or research.
