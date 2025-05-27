@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import namali from '../assets/namalie.png';
 import rivoni from '../assets/rivoni.jpg';
-import sahan from '../assets/sahan1.png';
+import sahan from '../assets/sahan.jpg';
 import prabash from '../assets/prabash.jpg';
 import heshan from '../assets/image.png';
 import rashmika from '../assets/Rashmika.jpg';
@@ -54,7 +54,7 @@ const students = [
     name: 'Senanayaka W S H M',
     role: 'Team Member',
     affiliation: 'SLIIT - Faculty of Computing',
-    department: 'Information Systems',
+    department: 'Information Technology',
     image: heshan,
     email: 'it21341540@my.sliit.lk',
     linkedin: 'https://www.linkedin.com/in/heshan-senanayaka/',
