@@ -6,43 +6,28 @@ import 'aos/dist/aos.css';
 const documents = [
   {
     title: 'Topic Assessment',
-    submitted: '2024/02/15',
+    submitted: '2024/05/13',
     type: 'Group',
-    link: 'https://drive.google.com/drive/folders/1eidRRj4UAsDGYpmiYiI-bfhAeoZPlj82?usp=drive_link',
+    link: 'https://drive.google.com/file/d/1xUaLITGAC2zHTFVyS3fJyzmpXrm5gL8F/view?usp=drive_link',
     description:
       'Initial topic evaluation outlining relevance and feasibility.',
   },
   {
-    title: 'Project Charter',
-    submitted: '2024/02/15',
-    type: 'Group',
-    link: 'https://drive.google.com/drive/folders/1AavcRUKQOW1JLYetqa5mMVEP7Uqxygp7?usp=drive_link',
-    description:
-      "Defines the project's purpose, scope, and key responsibilities.",
-  },
-  {
     title: 'Proposal Document',
-    submitted: '2024/03/15',
+    submitted: '2024/08/23',
     type: 'Individual',
     link: 'https://drive.google.com/drive/folders/1XLleeTMqQyygWFgt9LIk9g3yaxREHWNz?usp=drive_link',
     description: 'Explains project goals, timeline, and chosen technologies.',
   },
   {
-    title: 'Check List Documents',
-    submitted: 'Pending',
-    type: 'Group',
-    link: 'https://drive.google.com/drive/folders/1KtCql3jyObMObHVpjbY4W52l-1Nb4Xw-?usp=drive_link',
-    description: 'Checklist to ensure all final deliverables are included.',
-  },
-  {
-    title: 'Final Document - Main',
+    title: 'Individual Reports',
     submitted: '2025/04/11',
     type: 'Individual',
     link: 'https://drive.google.com/drive/folders/1UZ_SoCiXWdR4GEtk9qfsCMWmEtw-4Dkx?usp=drive_link',
     description: 'Detailed report covering research, analysis, and outcomes.',
   },
   {
-    title: 'Final Document - Main (Group)',
+    title: 'Final Report',
     submitted: '2025/04/11',
     type: 'Group',
     link: 'https://drive.google.com/drive/folders/1CxYS2c5marfltrGiOTv6Y6Jn_6s-wo1Q?usp=drive_link',
