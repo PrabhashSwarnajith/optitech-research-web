@@ -33,6 +33,13 @@ const documents = [
     link: 'https://drive.google.com/drive/folders/1CxYS2c5marfltrGiOTv6Y6Jn_6s-wo1Q?usp=drive_link',
     description: 'Final group submission combining all project components.',
   },
+  {
+    title: 'Research Paper',
+    submitted: '2025/03/30',
+    type: 'Group',
+    link: 'https://drive.google.com/file/d/12Ip7gOb-nEhOSVXlqmMTwldDRVddIUFF/view?usp=drive_link',
+    description: 'The Final product of the research.',
+  },
 ];
 
 const Documents = () => {
