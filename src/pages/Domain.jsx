@@ -9,7 +9,7 @@ import css from '../assets/tech/css.png';
 import tensorflow from '../assets/tech/tensorflow.png';
 import keras from '../assets/tech/keras.png';
 import gcloud from '../assets/tech/gcloud.png';
-import flask from '../assets/tech/flask.png';
+import fastAPI from '../assets/tech/fastAPI.jpg';
 import opencv from '../assets/tech/opencv.png';
 import methodology from '../assets/methodology-eye.png';
 
@@ -21,7 +21,7 @@ const technologies = [
   { name: 'TensorFlow', file: tensorflow },
   { name: 'Keras', file: keras },
   { name: 'Google Cloud', file: gcloud },
-  { name: 'Flask', file: flask },
+  { name: 'FastAPI', file: fastAPI },
   { name: 'OpenCV', file: opencv },
 ];
 
