@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import namali from '../assets/namalie.png';
-import rivoni from '../assets/Rivoni.png';
+import rivoni from '../assets/rivoni.jpg';
 import sahan from '../assets/sahan1.png';
 import prabash from '../assets/prabash.jpg';
 import heshan from '../assets/image.png';
