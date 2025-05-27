@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 const presentations = [
   {
     title: 'Proposal Presentation',
-    submitted: '2024/08/12',
+    submitted: '2024/07/06',
     type: 'Group',
     link: 'https://docs.google.com/presentation/d/1Sb34-vI4eFYlUm2yrHYfNL-jkOkI9p7n/edit?usp=drive_link',
     description:
@@ -32,7 +32,7 @@ const presentations = [
     title: 'Final Presentation',
     submitted: '2025/05/07',
     type: 'Group',
-    link: 'https://drive.google.com/drive/folders/1WtdJ-5Pf3bq3uNX3EMNPEzG4WKAJFOgx?usp=drive_link',
+    link: 'https://docs.google.com/presentation/d/1SpmQkULnL8Akcb0qKbMzbmZg03GCGPYv/edit?usp=drive_link&ouid=109728648207284349626&rtpof=true&sd=true',
     description:
       'Final project delivery with system demo, research findings, and overall conclusions.',
   },
